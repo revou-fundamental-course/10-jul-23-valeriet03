@@ -3,48 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revou Demo</title>
+    <title>Kalkulator BMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navigation">
-        <nav>
-            <ul class="nav">
-                <li><a href="#navigation">Home</a></li>
-                <li><a href="#section-2">Section 2</a></li>
-                <li><a href="#section-3">Section 3</a></li>
+    <div id="main1">
+        <div>
+            <h1>Kalkulator BMI</h1>
+            <br>
+        </div>
+        <div>
+            <p>Berat badan ideal adalah impian semua orang.
+                Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+            </p>
+            <br>
+        </div>
+
+        <div class="form">
+            <label for="jenis_kelamin">Jenis Kelamin</label><br>
+            <input type="radio" id="pria" name="jk">
+            <label for="pria">Pria</label>
+            <input type="radio" id="wanita" name="jk">
+            <label for="wanita">Wanita</label>
+
+            <br><br>
+
+            <label for="bb">Berat Badan (kg)</label><br>
+            <input type="number" class="input_text" id="bb" name="bb">
+            <br><br>
+            <label for="usia">Usia (tahun)</label><br>
+            <input type="number" class="input_text" id="usia" name="usia">
+            <br><br>
+            <label for="tb">Tinggi Badan (cm)</label><br>
+            <input type="number" class="input_text" id="tb" name="tb">
+
+            <br><br>
+
+            <button class="btn_spesial" id="hitung" onclick="hitungClick()">Hitung BMI</button>
+            <button id="reset" onclick="resetClick()">Reset</button>
+        </div>
+
+        <div>
+            <br>
+            <h2>Keunggulan Fitur</h2>
+            <br>
+            <ol>
+                <li>Menghitung berat badan</li>
+                <li>Menentukan kategori berat badan ideal atau tidak</li>
+                <li>Mempersiapkan program penurunan berat badan</li>
+            </ol>
+            <br>
+            <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                <br><br>
+                Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum, Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.
+            </p>
+        </div>
+    </div>
+
+
+
+    <div id="main2">
+        <div>
+            <h1>Hasil</h1>
+            <br>
+        </div>
+        
+        <div class="form hasil">
+            <h2>Berat Badan Anda</h2>
+
+            <input type="number" readonly id="result" name="result">
+
+            <br>
+            <p id="komen1"></p>
+            <br>
+            <button class="btn_spesial"><a href="index.html" id="cek_ulang">Cek Ulang BMI Anda</a></button>
+        </div>
+        
+        <div>
+            <br>
+            <p>Hasil BMI <span id="batas"></span></p>
+            <br>
+            <p>Anda berada dalam kategori <span id="komen2"></span>
+            </p>
+            <br>
+
+            <input type="submit" value="Konsultasi Ahli Gizi Via Aplikasi">
+            <input type="submit" value="Registrasi Online Ahli Gizi">
+
+            <br><br>
+            <h2>Disclaimer</h2>
+            <br>
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang.
+                Anda perlu untuk berkonsultasi lebih lanjut mengenai dampak dan resiko terkait dengan berat badan Anda.
+            </p>
+            <br>
+        </div>
+
+        <div class="form hasil">
+            <h2 id="dampak"></h2>
+            <br>
+            <ul id="penyakit">
             </ul>
-        </nav>
-    </div>
-    <div class="header">
-        <h1 id="titleLabel" class="title">Revou Demo</h1>
-        <h3>World Class Engineer</h3>
-    </div>
-    <div class="main-content">
-        <div class="left-section">
-            <h3 id="fNameOutput"> </h3>
-            <h3 id="lNameOutput"> </h3>
-            <h3 id="ageOutput"> </h3>
-        </div>
-        <div class="right-section">
-            <div class="container">
-                <form>
-                    <label for="fNameInput">First name:</label>
-                    <input type="text" id="fNameInput" name="fNameInput" placeholder="First Name"><br><br>
-                    <label for="lNameInput">Last name:</label>
-                    <input type="text" id="lNameInput" name="lNameInput" placeholder="Last Name"><br><br>
-                    <label for="ageInput">Age:</label>
-                    <input type="text" id="ageInput" name="ageInput" placeholder="Age"><br><br>
-                    <button type="submit" id="submitButton"> Submit Data </button>
-                </form>
-            </div>
+            <br>
+
+            <input type="submit" class="btn_spesial" value="Konsultasi Dokter Via Aplikasi">
+            <input type="submit" class="btn_spesial" value="Registrasi Online Sekarang">
         </div>
     </div>
-    <!--
-        <img src="", class="slider">
-        <img src="", class="slider">
-        <img src="", class="slider">
-    -->
+
+
+    
     <script src="script.js"></script>
 </body>
 </html>
