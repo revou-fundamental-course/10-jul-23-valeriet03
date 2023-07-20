@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+h1{
+    padding-top: 0px;
+}
+
+.form{
+    width: 100%;
+    padding: 20px 20px;
+    line-height: 28px;
+    font-weight: bold;
+    background-color: lightgray;
+}
+input, button{
+    padding: 10px 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+.input_text{
+    width: 80%;
+}
+.btn_spesial{
+    background-color: darkgray;
+    color: white;
+    padding: 10px 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+ol{
+    margin-left: 20px;
+}
+
+
+
+.hasil{
+    text-align: center;
+}
+#result{
+    font-size: 52px;
+    font-weight: bold;
+    background-color: lightgray;
+    text-align: center;
+    border: none;
+    width: 100%;
+}
+#cek_ulang{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
